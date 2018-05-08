@@ -136,7 +136,7 @@ We can clearly see that the new __phase margin we got is 82 degree__ which is ve
 I this way out OPAMP designing part is done. Now we have to test this OPAMP in various configuration to see if it is meeting other required specifications or not.
 
 This procedure proceeds as follows:
-### 1. Calculation of CMRR
+### 1. Calculation of Common Mode Rejection Ratio (CMRR)
 We know that __CMRR(dB) = Adm(dB) - Acm(dB)__. We already have the value of Adm = 65.57dB. We now need to calculate the commo mode gain. This can calculated by doing following setup. Here I have given a common mode signal at the output and I have plotted a frequency response.
 <p align="center">
 <img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/Common%20mode%20gain%20setup.jpg" />
@@ -164,3 +164,28 @@ We know that according to target specifications the slew rate should be 10V/μse
 </p>
 
 From the above graph we see that, +SR = 13.82V/μsec and |-SR| = 11.045V/μsec. The average slew rate is __SR = 12.43V/μsec__. Our target was 10V/μsec hence the result is satisfactory.
+
+### 4. Calculation of Output Voltage Swing Range (OVSR)
+OVSR is nothing but Vout_max and Vout_min. We can calculate them as follows
+<p align="center">
+<img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/OVSR%20calculation.jpg" />
+</p>
+Figures below shows the setup to calculate OVSR and its reponse.
+<p align="center">
+<img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/OVSR%20setup.jpg" />
+</p>
+<p align="center">
+<img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/OVSR%20plot.jpg" />
+</p>
+
+In later figure, the plot above is the plot of Vout when Vin_CM is changes from 0 volt to 3.3 volts. The plot below shows the derivative of it. The markers were first kept in 2nd plot at the (rising point + 10%) and (falling point - 10%). The x-values of those points were noted and markers were placed on same X co-ordinates in the plot above. This gave the total OVSR. From figure  we can see that __0.095V < Vout< 3.075V__
+
+### 5. Calculation of Input Common Mode Range (ICMR)
+To calculate the ICMR, I gave a random AC signal and I varied the Input common mode signal from 0 voltss to 3.3 volts. I observed the point with highest gain and 3db below point of it and noted the corresponding X co-ordinate values. The setup and plot is as follows:
+<p align="center">
+<img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/ICMR%20setup.jpg" />
+</p>
+<p align="center">
+<img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/ICMR%20plot.jpg" />
+</p>
+From the plot we see that, 0.66 V < ICMR < 3.12 V.
