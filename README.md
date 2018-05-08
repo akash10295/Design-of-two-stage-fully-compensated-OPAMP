@@ -8,12 +8,14 @@ NOTE: You can go through this text or you can just refer the project report I ma
 The project flow goes as follows:
 1. Declaring design specifications.
 2. Getting values of threshold voltages (Vthn and |Vthp|) and process-transconductances for both PMOS and NMOS (μpCox and μnCox).
-2. Deciding values of compensation capacitor (Cc) and bias current (I) from given load capacitor and Slew Rate.
-3. Design of input transistors.
-4. Design of mirror load transistors and tail current source transistor for first stage.
-5. Design of second stage input transistor.
-6. Design of current source transistor for second stage. (Once this it done, we will check the reponse of the OPAMP without nulling resistor. If needed, then)
-7. Design of nulling resistor and its bias circuitary transistors.
+3. Deciding values of compensation capacitor (Cc) and bias current (I) from given load capacitor and Slew Rate.
+4. Design of input transistors.
+5. Design of mirror load transistors and tail current source transistor for first stage.
+6. Design of second stage input transistor.
+7. Design of current source transistor for second stage. (Once this it done, we will check the reponse of the OPAMP without nulling resistor. If needed, then)
+8. Design of nulling resistor and its bias circuitary transistors.
+
+Once the design is complete, the circuit is tested for all the specification to confirm if it is working as the desired target specifications mentioned in step 1.
 
 So without delay, let's start designing!
 
@@ -28,4 +30,5 @@ We are required to design an OPAMP having load capacitor CL = 10pF with the 3.3 
 - Phase Margin: f(GB) ≥ 60° with a 10 pF load capacitance.
 - Power dissipation: Pdiss ≤ 1mW.
 
-## 2. Deciding values of compensation capacitor (Cc) and bias current (I) from given load capacitor and Slew Rate.
+## 2. Getting values of threshold voltages (Vthn and |Vthp|) and process-transconductances for both PMOS and NMOS (μpCox and μnCox).
+The most important parameters that we need during the calculation and which are not available with us imitially are threshold voltages and process trans conductances of the devices which we will be using throughout our designing. The only way to get them is by simulation. For that, I set up the NMOS and PMOS devices in diode connected fashion and forced 30μA of current through them with Vdd = 3.3 volts. The screenshot of this setup is as shown below.
