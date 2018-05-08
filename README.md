@@ -1,4 +1,4 @@
-# Design-of-two-stage-fully-compensated-OPAMP
+# Design of Two-stage fully compensated OPAMP
 
 This is one of my academic project from Spring 2018 semester. Course __EECT 6326: Analog Integrated Circuits Design__. In this course I got an introduction to the principles of analog IC design. I aquired the knowledge of circuit level analog IC design required in industry and research. With this knowledge, I designed an _Two stage Operational Amplifier with miller compensation and programmable nulling resistor_.
 
@@ -49,6 +49,18 @@ I did DC Analysis on this setup. Once done I got the following values:
 Now that we have the requred unknowns, we can proceed to design stpes.
 
 ## 3 Deciding values of compensation capacitor (Cc) and bias current (I) from given load capacitor and Slew Rate.
+The initial circuit for the system will be as shown below. I will make changes if thensystem doesn't meet the requred specifications.
+
+<p align="center">
+<img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/Without%20nulling%20resistor.jpg" />
+</p>
+
 We have target Slew rate and given Load capacitor CL in the specification. We also have the target of Phase margin > 60 degree.
-The condition for 60 degree phase margin is Cc>=0.22xCL Hence, for our project Cc should be more than or equal to 2.2pF. I am choosing value of Cc to Cc = 3pF
-Now, SR = I5/Cc. From this we can calculate I5 = SR x Cc = 30μA.
+The condition for 60 degree phase margin is Cc>=0.22xCL Hence, for our project Cc should be more than or equal to 2.2pF. I am choosing value of Cc to **Cc = 3pF**
+Now, SR = I5/Cc. From this we can calculate **I5 = SR x Cc = 30μA**.
+
+
+## 4. Design of input transistors M1 and M2.
+<p align="center">
+<img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/Step%202.jpg" />
+</p>
