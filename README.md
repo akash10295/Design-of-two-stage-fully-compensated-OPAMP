@@ -96,7 +96,7 @@ The current flowing from M6 will be same as the one flowing from M7. Als, M7 wil
 <p align="center">
 <img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/Step%206.jpg" />
 </p>
----------
+---
 
 Now we have all the W/L ratios of the transistors for the circuit we were aiming to build. When designed in cadence and plotted AC response by doing AC analysis we got following result.
 <p align="center">
@@ -119,4 +119,4 @@ The following diagram also follows the calculations of aspect ratios of newly ad
 <p align="center">
 <img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/5.jpg" />
 </p>
------
+---
