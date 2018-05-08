@@ -105,3 +105,14 @@ Now we have all the W/L ratios of the transistors for the circuit we were aiming
 </p>
 
 From the frequency response we can see that the phase margin that we got with this configuration is not what we expected. It is significantly low and we need make changes in the circuit.
+
+## 8.Design of nulling resistor and its bias circuitary transistors.
+As seen above, we did not get the required phase margin and we deciced to put the nulling resistor in series with the compensation capcitor. This can be implemented by using an ideal resistor but it is always a good pratice to try to design everything using MOS when designing IC. Based on the observed common mode signal at the output it is recommended to use a PMOS device (M8) to implement this resistor. The gate voltage for this PMOS can be anything which will make sure that it is turned on (even though there will not be any DC current flowing through it because of the capcitor in series). If we make this gate voltage fixed then this topology will work only for fixed load. To make it 'programmable' for any loads following arrangement can be made.
+The following diagram also follows the calculations of aspect ratios of newly added transistors to the system (M8, M9, M10, M11)
+
+<p align="center">
+<img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/4.jpg" />
+</p>
+<p align="center">
+<img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/5.jpg" />
+</p>
