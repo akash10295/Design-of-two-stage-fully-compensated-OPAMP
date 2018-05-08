@@ -34,7 +34,7 @@ We are required to design an OPAMP having load capacitor CL = 10pF with the 3.3 
 The most important parameters that we need during the calculation and which are not available with us imitially are threshold voltages and process trans conductances of the devices which we will be using throughout our designing. The only way to get them is by simulation. For that, I set up the NMOS and PMOS devices in diode connected fashion and forced 30μA of current through them with Vdd = 3.3 volts. The screenshot of this setup is as shown below.
 
 <p align="center">
-<img ![alt text](https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/vth_ucox.jpg)/>
+<img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/vth_ucox.jpg" />
 </p>
 
 With this setup I got the following values:
