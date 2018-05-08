@@ -2,6 +2,7 @@
 
 This is one of my academic project from Spring 2018 semester. Course __EECT 6326: Analog Integrated Circuits Design__. In this course I got an introduction to the principles of analog IC design. I aquired the knowledge of circuit level analog IC design required in industry and research. With this knowledge, I designed an _Two stage Operational Amplifier with miller compensation and programmable nulling resistor_.
 
+NOTE:  I am going to skip the derivations of the formulas that I am using in this project. All these derivations can be found on the internet very easily. One of the source I would suggest is textbook by P. Allen and D. Holberg,"CMOS Analog Circuit Design",The Oxford Series in Electrical and Computer Engineering, 3rd ed.
 NOTE: You can go through this text or you can just refer the project report I made which is attached in the same repository.
 
 
@@ -37,10 +38,17 @@ The most important parameters that we need during the calculation and which are 
 <img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/vth_ucox.jpg" />
 </p>
 
-With this setup I got the following values:
+I did DC Analysis on this setup. Once done I got the following values:
 
 | Parameter                | NMOS             | PMOS           |
 | ------------------------ |:----------------:| :-------------:|
 | Threshold voltage        | Vtn_min = 0.52 V | /Vtp/ = 0.96 V |
 |                          | Vtn_max = 0.96 V |                |
 | Process transconductance | 200μA/V          |         60μA/v |
+
+Now that we have the requred unknowns, we can proceed to design stpes.
+
+## 3 Deciding values of compensation capacitor (Cc) and bias current (I) from given load capacitor and Slew Rate.
+We have target Slew rate and given Load capacitor CL in the specification. We also have the target of Phase margin > 60 degree.
+The condition for 60 degree phase margin is Cc>=0.22xCL Hence, for our project Cc should be more than or equal to 2.2pF. I am choosing value of Cc to Cc = 3pF
+Now, SR = I5/Cc. From this we can calculate I5 = SR x Cc = 30μA.
