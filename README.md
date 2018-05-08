@@ -39,6 +39,6 @@ With this setup I got the following values:
 
 | Parameter                | NMOS             | PMOS           |
 | ------------------------ |:----------------:| --------------:|
-| Threshold voltage        | Vtn_min = 0.52 V | |Vtp| = 0.96 V |
+| Threshold voltage        | Vtn_min = 0.52 V | /Vtp/ = 0.96 V |
 |                          | Vtn_max = 0.96 V |                |
 | Process transconductance | 200μA/V          |         60μA/v |
