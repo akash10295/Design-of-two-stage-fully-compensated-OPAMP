@@ -121,7 +121,7 @@ The following diagram also follows the calculations of aspect ratios of newly ad
 </p>
 ---
 
-Once this this done, I made the corresponding changes in the previous circuit in cadence and simulated it.
+Once this is done, I made the corresponding changes in the previous circuit in cadence and simulated it.
 <p align="center">
 <img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/Schematic%20After%20inserting%20Nulling%20resistor.jpg" />
 </p>
@@ -146,3 +146,21 @@ We know that __CMRR(dB) = Adm(dB) - Acm(dB)__. We already have the value of Adm 
 </p>
 
 From the response we can see that the Acm = -15.36dB. Hence the CMRR is, __CMRR = Acm – Adm = 65.57 - (-15.36) = 80.9dB__, which is very excellent.
+
+### 2. Calculation of power dissipation
+Total current flowing through circuit according to calculation is __Total Current = (30+30+7.5+210)μA = 277.5μA__. Hence the total power dissipated should be __Pdiss = 3.3V x 277.5μA = 0.915mW__. Lets see if the actual circuit also gives the same power or not.
+To calculate power dissipation, I did DC analysis the, Analog Environment>Tools>Result Browser>dcOp-dc>:pwr>Right click"Table". The __power dissipation was 1.012mW__
+<p align="center">
+<img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/Power%20dissipation.jpg" />
+</p>
+
+### 3. Calculation of Slew Rate.
+We know that according to target specifications the slew rate should be 10V/μsec. Lets see how much we are actually getting. Below is the setup for calculation of SR. I connected inverting terminal to output in unity gain closed loop form and provided pulse input at the non-inverting terminal and observed the transient reponse.
+<p align="center">
+<img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/Slew%20rate%20setup.jpg" />
+</p>
+<p align="center">
+<img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/Slew%20rate%20plot.jpg" />
+</p>
+
+From the above graph we see that, +SR = 13.82V/μsec and |-SR| = 11.045V/μsec. The average slew rate is __SR = 12.43V/μsec__. Our target was 10V/μsec hence the result is satisfactory.
