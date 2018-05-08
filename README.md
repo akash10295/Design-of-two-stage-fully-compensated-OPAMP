@@ -120,3 +120,29 @@ The following diagram also follows the calculations of aspect ratios of newly ad
 <img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/5.jpg" />
 </p>
 ---
+
+Once this this done, I made the corresponding changes in the previous circuit in cadence and simulated it.
+<p align="center">
+<img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/Schematic%20After%20inserting%20Nulling%20resistor.jpg" />
+</p>
+
+From above image, we can see that all the transistors are in saturation region which proves that we are going in right direction. After this I plotted the AC reponse of the circuit as shown below.
+<p align="center">
+<img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/Response%20after%20inserting%20nulling%20resistor.jpg" />
+</p>
+
+We can clearly see that the new __phase margin we got is 82 degree__ which is very excellent. The DC gain of the circuit is __Av(0)=Adm=65.57db__. Also the gain bandwidth is __GBW = 24MHz__.
+
+I this way out OPAMP designing part is done. Now we have to test this OPAMP in various configuration to see if it is meeting other required specifications or not.
+
+This procedure proceeds as follows:
+### 1. Calculation of CMRR
+We know that __CMRR(dB) = Adm(dB) - Acm(dB)__. We already have the value of Adm = 65.57dB. We now need to calculate the commo mode gain. This can calculated by doing following setup. Here I have given a common mode signal at the output and I have plotted a frequency response.
+<p align="center">
+<img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/Common%20mode%20gain%20setup.jpg" />
+</p>
+<p align="center">
+<img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/Common%20mode%20gain%20plot.jpg" />
+</p>
+
+From the response we can see that the Acm = -15.36dB. Hence the CMRR is, __CMRR = Acm – Adm = 65.57 - (-15.36) = 80.9dB__, which is very excellent.
