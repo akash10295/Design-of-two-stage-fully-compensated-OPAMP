@@ -2,8 +2,9 @@
 
 This is one of my academic project from Spring 2018 semester. Course __EECT 6326: Analog Integrated Circuits Design__. In this course I got an introduction to the principles of analog IC design. I aquired the knowledge of circuit level analog IC design required in industry and research. With this knowledge, I designed an _Two stage Operational Amplifier with miller compensation and programmable nulling resistor_.
 
-NOTE:  I am going to skip the derivations of the formulas that I am using in this project. All these derivations can be found on the internet very easily. One of the source I would suggest is textbook by P. Allen and D. Holberg,"CMOS Analog Circuit Design",The Oxford Series in Electrical and Computer Engineering, 3rd ed.
-NOTE: You can go through this text or you can just refer the project report I made which is attached in the same repository.
+NOTE1:  I am going to skip the derivations of the formulas that I am using in this project. All these derivations can be found on the internet very easily. One of the source I would suggest is textbook by P. Allen and D. Holberg,"CMOS Analog Circuit Design",The Oxford Series in Electrical and Computer Engineering, 3rd ed.
+NOTE2: You can go through this text or you can just refer the project report I made which is attached in the same repository.
+NOTE3: The step numbers do not match with the numbers in images below. It is of least concern. The procedure follows a correct flow.
 
 
 The project flow goes as follows:
@@ -48,7 +49,7 @@ I did DC Analysis on this setup. Once done I got the following values:
 
 Now that we have the requred unknowns, we can proceed to design stpes.
 
-## 3 Deciding values of compensation capacitor (Cc) and bias current (I) from given load capacitor and Slew Rate.
+## 3. Deciding values of compensation capacitor (Cc) and bias current (I) from given load capacitor and Slew Rate.
 The initial circuit for the system will be as shown below. I will make changes if thensystem doesn't meet the requred specifications.
 
 <p align="center">
@@ -64,3 +65,14 @@ Now, SR = I5/Cc. From this we can calculate **I5 = SR x Cc = 30μA**.
 <p align="center">
 <img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/Step%202.jpg" />
 </p>
+
+## 5. Design of mirror load transistors and tail current source transistor for first stage(M3, M4 and M5).
+<p align="center">
+<img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/Step%203.jpg" />
+</p>
+
+<p align="center">
+<img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/Step%204.jpg" />
+</p>
+
+Please keep a note that I have changed the sizes of input transistors from what we got initially. Therefore, the input transistor gm is also changed.
