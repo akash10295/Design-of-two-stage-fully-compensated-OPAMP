@@ -76,3 +76,20 @@ Now, SR = I5/Cc. From this we can calculate **I5 = SR x Cc = 30μA**.
 </p>
 
 Please keep a note that I have changed the sizes of input transistors from what we got initially. Therefore, the input transistor gm is also changed.
+
+
+## 6. Design of second stage input transistor M6
+Key things to keep in mind while designing 2nd input stage is that, it should properly mirror the current from first stage (blancing) and it should be sized in such a way that the output pole will go beyond our frequency of interests so that it will not create any concerns for us while designing.
+
+<p align="center">
+<img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/Step%205a.jpg" />
+</p>
+<p align="center">
+<img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/Step%205b.jpg" />
+</p>
+
+## 7. Design of current source transistor for second stage M7.
+The current flowing from M6 will be same as the one flowing from M7. Als, M7 will form mirror with M5. Hench keeping that in mind, we have to size M7. Normally, S7 = 1/2x(S6)
+<p align="center">
+<img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/Step%206.jpg" />
+</p>
