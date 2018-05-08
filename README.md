@@ -119,3 +119,4 @@ The following diagram also follows the calculations of aspect ratios of newly ad
 <p align="center">
 <img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/5.jpg" />
 </p>
+-----
