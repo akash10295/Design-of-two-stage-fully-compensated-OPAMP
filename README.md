@@ -47,7 +47,7 @@ I did DC Analysis on this setup. Once done I got the following values:
 |                          | Vtn_max = 0.96 V |                |
 | Process transconductance | 200μA/V          |         60μA/v |
 
-Now that we have the requred unknowns, we can proceed to design stpes.
+Now that we have the required unknowns, we can proceed to design stpes.
 
 ## 3. Deciding values of compensation capacitor (Cc) and bias current (I) from given load capacitor and Slew Rate.
 The initial circuit for the system will be as shown below. I will make changes if thensystem doesn't meet the requred specifications.
@@ -93,3 +93,15 @@ The current flowing from M6 will be same as the one flowing from M7. Als, M7 wil
 <p align="center">
 <img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/Step%206.jpg" />
 </p>
+---------
+
+Now we have all the W/L ratios of the transistors for the circuit we were aiming to build. When designed in cadence and plotted AC response by doing AC analysis we got following result.
+<p align="center">
+<img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/Schematic%20without%20nulling%20resistor.jpg" />
+</p>
+
+<p align="center">
+<img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/Plot%20Without%20Nulling%20Resistor.jpg" />
+</p>
+
+From the frequency response we can see that the phase margin that we got with this configuration is not what we expected. It is significantly low and we need make changes in the circuit.
