@@ -191,3 +191,17 @@ To calculate the ICMR, I gave a random AC signal and I varied the Input common m
 <img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/ICMR%20plot.jpg" />
 </p>
 From the plot we see that, 0.66 V < ICMR < 3.12 V.
+
+
+To test this OPAMP I implemented a comparator and a Schmitt Trigger circuit using this OPAMP. The figure below shows the schematic setup of the Comparator (left) anf Schmitt Trigger (right).
+<p align="center">
+<img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/Schmitt%20Trigger%20and%20comparator%20setup.jpg" />
+</p>
+I ran transient analysis on both of these circuits and applied noisy input to both of them to get the following plot.
+<p align="center">
+<img src = "https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/Screenshots/Schmitt%20Trigger%20and%20comparator%20plot.jpg" />
+</p>
+
+The first waveform is noisy sinewave. Second waveform is the reponse of a comparator and third wave is the reponse of a Schmitt Trigger.
+
+
