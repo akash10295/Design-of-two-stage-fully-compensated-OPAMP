@@ -6,7 +6,9 @@ Professor: __Dr. Sudipto Chakraborty__.
 In this course I got an introduction to the principles of analog IC design. I aquired the knowledge of circuit level analog IC design required in industry and research. With this knowledge, I designed an _Two stage Operational Amplifier with miller compensation and programmable nulling resistor_.
 
 NOTE1:  I am going to skip the derivations of the formulas that I am using in this project. All these derivations can be found on the internet very easily. One of the source I would suggest is textbook by P. Allen and D. Holberg,"CMOS Analog Circuit Design",The Oxford Series in Electrical and Computer Engineering, 3rd ed.
-NOTE2: You can go through this text or you can just refer the project report I made which is attached in the same repository.
+
+NOTE2: You can go through this text or you can just refer the [project report](https://github.com/akash10295/Design-of-two-stage-fully-compensated-OPAMP/blob/master/AICD%20Project.pdf) I made which is attached in the same repository.
+
 NOTE3: The step numbers do not match with the numbers in images below. It is of least concern. The procedure follows a correct flow.
 
 
